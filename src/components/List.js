@@ -59,8 +59,11 @@ const List = ({ status, color }) => {
   };
 
   return (
-    <div ref={drop} className={`list m-4 p-4 bg-black text-white w-1/5 h-fit `}>
-      <div className="flex justify-between">
+    <div
+      ref={drop}
+      className={`list m-4 p-4 bg-white text-black w-1/5 h-fit border border-blue-50`}
+    >
+      <div className="flex justify-between ">
         <div className="flex">
           <h2 className={`${color} text-black px-2`}>{status + " "}</h2>
           <h2 className="px-3">{cards ? cards.length : "0"}</h2>
@@ -93,7 +96,7 @@ const Card = ({ card }) => {
     <div ref={drag}>
       <Link to={`/card/${card.id}?title=${card.title}&status=${card.status}`}>
         <div
-          className={`card bg-white my-2 p-2 text-black ${
+          className={`card  my-2 p-2 text-black border border-slate-400 ${
             isDragging ? "opacity-25" : "opacity-100"
           }`}
         >

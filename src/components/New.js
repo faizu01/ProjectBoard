@@ -26,15 +26,25 @@ const New = ({ addCard }) => {
       ) : (
         <>
           <input
-            className="bg-white my-2 p-2 text-black w-full h-fit"
+            className="bg-white my-2 p-2 text-black w-full h-fit "
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Enter a title for this card"
           />
           <div className="flex gap-3">
-            <button onClick={handleAddCard}>Add</button>
-            <button onClick={handleCrossCard}>❌</button>
+            <button
+              onClick={handleAddCard}
+              className="bg-emerald-700 rounded-md px-3 text-white"
+            >
+              Add
+            </button>
+            <button
+              onClick={handleCrossCard}
+              className="bg-red-400 rounded-md p-2 text-white"
+            >
+              Cancel
+            </button>
           </div>
         </>
       )}
